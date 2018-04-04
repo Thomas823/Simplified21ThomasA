@@ -8,3 +8,12 @@ C:\Users\Thomas\Desktop\Programming\Assignments\Simplified21ThomasA\Simplified21
 C:\Users\Thomas\Desktop\Programming\Assignments\Simplified21ThomasA\Simplified21ThomasA\obj\Debug\Simplified21ThomasA.exe
 C:\Users\Thomas\Desktop\Programming\Assignments\Simplified21ThomasA\Simplified21ThomasA\obj\Debug\Simplified21ThomasA.pdb
 C:\Users\Thomas\Desktop\Programming\Assignments\Simplified21ThomasA\Simplified21ThomasA\obj\Debug\Simplified21ThomasA.csprojResolveAssemblyReference.cache
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\Simplified21ThomasA\Simplified21ThomasA\bin\Debug\Simplified21ThomasA.exe.config
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\Simplified21ThomasA\Simplified21ThomasA\bin\Debug\Simplified21ThomasA.exe
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\Simplified21ThomasA\Simplified21ThomasA\bin\Debug\Simplified21ThomasA.pdb
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\Simplified21ThomasA\Simplified21ThomasA\obj\Debug\Simplified21ThomasA.csprojResolveAssemblyReference.cache
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\Simplified21ThomasA\Simplified21ThomasA\obj\Debug\Simplified21ThomasA.Properties.Resources.resources
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\Simplified21ThomasA\Simplified21ThomasA\obj\Debug\Simplified21ThomasA.frmSimplified21.resources
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\Simplified21ThomasA\Simplified21ThomasA\obj\Debug\Simplified21ThomasA.csproj.GenerateResource.Cache
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\Simplified21ThomasA\Simplified21ThomasA\obj\Debug\Simplified21ThomasA.exe
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\Simplified21ThomasA\Simplified21ThomasA\obj\Debug\Simplified21ThomasA.pdb
