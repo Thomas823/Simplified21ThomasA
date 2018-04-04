@@ -181,6 +181,16 @@ namespace Simplified21ThomasA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Stay {
+            get {
+                object obj = ResourceManager.GetObject("Stay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ten {
             get {
                 object obj = ResourceManager.GetObject("Ten", resourceCulture);

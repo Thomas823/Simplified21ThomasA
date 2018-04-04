@@ -28,6 +28,9 @@ namespace Simplified21ThomasA
         int playerSum;
         int computerSum;
         int cardLoop;
+        int computerWinCount = 0;
+        int playerWinCount = 0;
+        int computerTwoCardSum;
 
         Random randomNumberGenerator = new Random();
         const int MIN_VALUE = 1;
@@ -72,11 +75,16 @@ namespace Simplified21ThomasA
             picComputerCardOne.Hide();
             picComputerCardTwo.Hide();
             picComputerCardThree.Hide();
-            lblStay.Hide();
+            picStay.Hide();
             lblComputerSum.Hide();
             lblPlayerSum.Hide();
             lblComputerSum.Hide();
             lblResults.Hide();
+            lblComputerWins.Hide();
+            lblPlayerWins.Hide();
+
+            // Set player's third card to zero each new game
+            playerCards[2] = 0;
 
             // Reset loop
             cardLoop = 0;
@@ -93,13 +101,26 @@ namespace Simplified21ThomasA
             playerCards[1] = randomNumberGenerator.Next(MIN_VALUE, MAX_VALUE + 1);
             computerCards[0] = randomNumberGenerator.Next(MIN_VALUE, MAX_VALUE + 1);
             computerCards[1] = randomNumberGenerator.Next(MIN_VALUE, MAX_VALUE + 1);
-            computerCards[2] = randomNumberGenerator.Next(MIN_VALUE, MAX_VALUE + 1);
+
+            // Should computer get third card
+            // Find sum of computer
+            computerTwoCardSum = computerCards[0] + computerCards[1];
+            // If equal or less then 16, take a card
+            if (computerTwoCardSum <= 16)
+            {
+                computerCards[2] = randomNumberGenerator.Next(MIN_VALUE, MAX_VALUE + 1);
+                picComputerCardThree.Image = Properties.Resources.Question_Mark;
+                picComputerCardThree.Show();
+            }
+            else
+            {
+                computerCards[2] = 0;
+            }
 
             // Set computer question mark cards
             picComputerCardOne.Image = Properties.Resources.Question_Mark;
             picComputerCardTwo.Image = Properties.Resources.Question_Mark;
-            picComputerCardThree.Image = Properties.Resources.Question_Mark;
-            // Set player's first card
+            // Set player's first card resulting from the random number
             switch (playerCards[0])
             {
                 case 1:
@@ -133,7 +154,7 @@ namespace Simplified21ThomasA
                     picPlayerCardOne.Image = Properties.Resources.Ten;
                     break;
             }
-            // Set player's second card
+            // Set player's second card resulting from the random number
             switch (playerCards[1])
             {
                 case 1:
@@ -170,14 +191,15 @@ namespace Simplified21ThomasA
             // Set player's third card
             picPlayerCardThree.Image = Properties.Resources.Hit;
 
-            // Display Cards and Stay Button
+            // Display Cards, Hit Card, Stay Button, and Player/Computer Wins
             picPlayerCardOne.Show();
             picPlayerCardTwo.Show();
             picPlayerCardThree.Show();
             picComputerCardOne.Show();
             picComputerCardTwo.Show();
-            picComputerCardThree.Show();
-            lblStay.Show();
+            picStay.Show();
+            lblComputerWins.Show();
+            lblPlayerWins.Show();
         }
 
         private void picPlayerCardThree_Click(object sender, EventArgs e)
@@ -187,7 +209,7 @@ namespace Simplified21ThomasA
                 // Generate third card
                 playerCards[2] = randomNumberGenerator.Next(MIN_VALUE, MAX_VALUE + 1);
 
-                // Set card
+                // Set player's third card resulting from the random number
                 switch (playerCards[2])
                 {
                     case 1:
@@ -223,7 +245,7 @@ namespace Simplified21ThomasA
                 }
 
                 // Hide stay button
-                lblStay.Hide();
+                picStay.Hide();
 
                 // Exit this loop option
                 cardLoop++;
@@ -233,10 +255,10 @@ namespace Simplified21ThomasA
             }
         }
 
-        private void lblStay_Click(object sender, EventArgs e)
+        private void picStay_Click(object sender, EventArgs e)
         {
             // Hide stay button and player's third card
-            lblStay.Hide();
+            picStay.Hide();
             picPlayerCardThree.Hide();
 
             // Continue the game
@@ -255,9 +277,16 @@ namespace Simplified21ThomasA
                 playerSum = playerCards[0] + playerCards[1] + playerCards[2];
             }
 
-            computerSum = computerCards[0] + computerCards[1] + computerCards[2];
+            if (computerCards[2] == 0)
+            {
+                computerSum = computerCards[0] + computerCards[1];
+            }
+            else
+            {
+                computerSum = computerCards[0] + computerCards[1] + computerCards[2];
+            }
 
-            // Display computer's cards
+            // Set computer's first card resulting from the random number
             switch (computerCards[0])
             {
                 case 1:
@@ -291,6 +320,7 @@ namespace Simplified21ThomasA
                     picComputerCardOne.Image = Properties.Resources.Ten;
                     break;
             }
+            // Set the computers second card resulting from the random number
             switch (computerCards[1])
             {
                 case 1:
@@ -324,38 +354,42 @@ namespace Simplified21ThomasA
                     picComputerCardTwo.Image = Properties.Resources.Ten;
                     break;
             }
-            switch (computerCards[2])
+            // Only display computer third card if one present
+            if (computerCards[2] != 0)
             {
-                case 1:
-                    picComputerCardThree.Image = Properties.Resources.One;
-                    break;
-                case 2:
-                    picComputerCardThree.Image = Properties.Resources.Two;
-                    break;
-                case 3:
-                    picComputerCardThree.Image = Properties.Resources.Three;
-                    break;
-                case 4:
-                    picComputerCardThree.Image = Properties.Resources.Four;
-                    break;
-                case 5:
-                    picComputerCardThree.Image = Properties.Resources.Five;
-                    break;
-                case 6:
-                    picComputerCardThree.Image = Properties.Resources.Six;
-                    break;
-                case 7:
-                    picComputerCardThree.Image = Properties.Resources.Seven;
-                    break;
-                case 8:
-                    picComputerCardThree.Image = Properties.Resources.Eight;
-                    break;
-                case 9:
-                    picComputerCardThree.Image = Properties.Resources.Nine;
-                    break;
-                case 10:
-                    picComputerCardThree.Image = Properties.Resources.Ten;
-                    break;
+                switch (computerCards[2])
+                {
+                    case 1:
+                        picComputerCardThree.Image = Properties.Resources.One;
+                        break;
+                    case 2:
+                        picComputerCardThree.Image = Properties.Resources.Two;
+                        break;
+                    case 3:
+                        picComputerCardThree.Image = Properties.Resources.Three;
+                        break;
+                    case 4:
+                        picComputerCardThree.Image = Properties.Resources.Four;
+                        break;
+                    case 5:
+                        picComputerCardThree.Image = Properties.Resources.Five;
+                        break;
+                    case 6:
+                        picComputerCardThree.Image = Properties.Resources.Six;
+                        break;
+                    case 7:
+                        picComputerCardThree.Image = Properties.Resources.Seven;
+                        break;
+                    case 8:
+                        picComputerCardThree.Image = Properties.Resources.Eight;
+                        break;
+                    case 9:
+                        picComputerCardThree.Image = Properties.Resources.Nine;
+                        break;
+                    case 10:
+                        picComputerCardThree.Image = Properties.Resources.Ten;
+                        break;
+                }
             }
 
             // Display Computer's and Person's Sum
@@ -370,18 +404,27 @@ namespace Simplified21ThomasA
                 // Both Bust and Dealer wins
                 lblResults.Text = "You Both Busted! The Computer Wins!";
                 ooh.Play();
+
+                // Increase win count to who won
+                computerWinCount++;
             }
             else if (playerSum > 21)
             {
                 // Set player to bust and computer to winner
                 lblResults.Text = "The Player Busted! The Computer Wins!";
                 whaWha.Play();
+
+                // Increase win count to who won
+                computerWinCount++;
             }
             else if (computerSum > 21)
             {
                 // Set computer to bust and player to winner
                 lblResults.Text = "The Computer Busted! The Player Wins!";
                 cheering.Play();
+
+                // Increase win count to who won
+                playerWinCount++;
             }
             else if (playerSum == computerSum)
             {
@@ -394,28 +437,44 @@ namespace Simplified21ThomasA
                 // Player has blackjack!
                 lblResults.Text = "The Player Got BlackJack! The Player Wins!";
                 cheering.Play();
+
+                // Increase win count to who won
+                playerWinCount++;
             }
             else if (computerSum == 21)
             {
                 // Computer has blackjack!
                 lblResults.Text = "The Computer Got BlackJack! The Computer Wins!";
                 whaWha.Play();
+
+                // Increase win count to who won
+                computerWinCount++;
             }
             else if (playerSum > computerSum)
             {
                 // Player won!
                 lblResults.Text = "The Player Got A Higher Number. The Player Wins!";
                 cheering.Play();
+
+                // Increase win count to who won
+                playerWinCount++;
             }
             else
             {
                 // Computer won!
                 lblResults.Text = "The Computer Got A Higher Number. The Computer Wins!";
                 whaWha.Play();
+
+                // Increase win count to who won
+                computerWinCount++;
             }
 
             // Display Results
             lblResults.Show();
+
+            // Display new win count numbers
+            lblComputerWins.Text = "Computer Wins: " + computerWinCount;
+            lblPlayerWins.Text = "Player Wins: " + playerWinCount;
         }
     }
 }

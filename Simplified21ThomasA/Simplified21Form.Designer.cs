@@ -40,10 +40,12 @@
             this.picComputerCardOne = new System.Windows.Forms.PictureBox();
             this.picComputerCardTwo = new System.Windows.Forms.PictureBox();
             this.picComputerCardThree = new System.Windows.Forms.PictureBox();
-            this.lblStay = new System.Windows.Forms.Label();
             this.lblComputerSum = new System.Windows.Forms.Label();
             this.lblPlayerSum = new System.Windows.Forms.Label();
             this.lblResults = new System.Windows.Forms.Label();
+            this.picStay = new System.Windows.Forms.PictureBox();
+            this.lblComputerWins = new System.Windows.Forms.Label();
+            this.lblPlayerWins = new System.Windows.Forms.Label();
             this.mnuMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCardOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCardTwo)).BeginInit();
@@ -51,6 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picComputerCardOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picComputerCardTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picComputerCardThree)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picStay)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuMainMenu
@@ -166,19 +169,6 @@
             this.picComputerCardThree.TabIndex = 8;
             this.picComputerCardThree.TabStop = false;
             // 
-            // lblStay
-            // 
-            this.lblStay.AutoSize = true;
-            this.lblStay.BackColor = System.Drawing.Color.Transparent;
-            this.lblStay.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStay.ForeColor = System.Drawing.Color.White;
-            this.lblStay.Location = new System.Drawing.Point(907, 348);
-            this.lblStay.Name = "lblStay";
-            this.lblStay.Size = new System.Drawing.Size(55, 28);
-            this.lblStay.TabIndex = 9;
-            this.lblStay.Text = "Stay";
-            this.lblStay.Click += new System.EventHandler(this.lblStay_Click);
-            // 
             // lblComputerSum
             // 
             this.lblComputerSum.AutoSize = true;
@@ -209,16 +199,49 @@
             this.lblResults.TabIndex = 12;
             this.lblResults.Text = "The Winner is: ";
             // 
+            // picStay
+            // 
+            this.picStay.Image = global::Simplified21ThomasA.Properties.Resources.Stay;
+            this.picStay.Location = new System.Drawing.Point(892, 353);
+            this.picStay.Name = "picStay";
+            this.picStay.Size = new System.Drawing.Size(71, 29);
+            this.picStay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picStay.TabIndex = 13;
+            this.picStay.TabStop = false;
+            this.picStay.Click += new System.EventHandler(this.picStay_Click);
+            // 
+            // lblComputerWins
+            // 
+            this.lblComputerWins.AutoSize = true;
+            this.lblComputerWins.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComputerWins.Location = new System.Drawing.Point(12, 123);
+            this.lblComputerWins.Name = "lblComputerWins";
+            this.lblComputerWins.Size = new System.Drawing.Size(134, 22);
+            this.lblComputerWins.TabIndex = 14;
+            this.lblComputerWins.Text = "Computer Wins: 0";
+            // 
+            // lblPlayerWins
+            // 
+            this.lblPlayerWins.AutoSize = true;
+            this.lblPlayerWins.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerWins.Location = new System.Drawing.Point(12, 167);
+            this.lblPlayerWins.Name = "lblPlayerWins";
+            this.lblPlayerWins.Size = new System.Drawing.Size(108, 22);
+            this.lblPlayerWins.TabIndex = 15;
+            this.lblPlayerWins.Text = "Player Wins: 0";
+            // 
             // frmSimplified21
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Simplified21ThomasA.Properties.Resources.Background;
             this.ClientSize = new System.Drawing.Size(1327, 620);
+            this.Controls.Add(this.lblPlayerWins);
+            this.Controls.Add(this.lblComputerWins);
+            this.Controls.Add(this.picStay);
             this.Controls.Add(this.lblResults);
             this.Controls.Add(this.lblPlayerSum);
             this.Controls.Add(this.lblComputerSum);
-            this.Controls.Add(this.lblStay);
             this.Controls.Add(this.picComputerCardThree);
             this.Controls.Add(this.picComputerCardTwo);
             this.Controls.Add(this.picComputerCardOne);
@@ -239,6 +262,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picComputerCardOne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picComputerCardTwo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picComputerCardThree)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picStay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,10 +282,12 @@
         private System.Windows.Forms.PictureBox picComputerCardOne;
         private System.Windows.Forms.PictureBox picComputerCardTwo;
         private System.Windows.Forms.PictureBox picComputerCardThree;
-        private System.Windows.Forms.Label lblStay;
         private System.Windows.Forms.Label lblComputerSum;
         private System.Windows.Forms.Label lblPlayerSum;
         private System.Windows.Forms.Label lblResults;
+        private System.Windows.Forms.PictureBox picStay;
+        private System.Windows.Forms.Label lblComputerWins;
+        private System.Windows.Forms.Label lblPlayerWins;
     }
 }
 

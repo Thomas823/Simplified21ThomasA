@@ -127,5 +127,8 @@
   <ItemGroup>
     <None Include="Properties\Wha Wha.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stay.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
