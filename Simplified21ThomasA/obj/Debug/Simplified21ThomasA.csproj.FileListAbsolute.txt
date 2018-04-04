@@ -1,0 +1,10 @@
+C:\Users\Thomas\Desktop\Programming\Assignments\Simplified21ThomasA\Simplified21ThomasA\bin\Debug\Simplified21ThomasA.exe.config
+C:\Users\Thomas\Desktop\Programming\Assignments\Simplified21ThomasA\Simplified21ThomasA\bin\Debug\Simplified21ThomasA.exe
+C:\Users\Thomas\Desktop\Programming\Assignments\Simplified21ThomasA\Simplified21ThomasA\bin\Debug\Simplified21ThomasA.pdb
+C:\Users\Thomas\Desktop\Programming\Assignments\Simplified21ThomasA\Simplified21ThomasA\obj\Debug\Simplified21ThomasA.Properties.Resources.resources
+C:\Users\Thomas\Desktop\Programming\Assignments\Simplified21ThomasA\Simplified21ThomasA\obj\Debug\Simplified21ThomasA.frmSimplified21.resources
+C:\Users\Thomas\Desktop\Programming\Assignments\Simplified21ThomasA\Simplified21ThomasA\obj\Debug\Simplified21ThomasA.csproj.GenerateResource.Cache
+C:\Users\Thomas\Desktop\Programming\Assignments\Simplified21ThomasA\Simplified21ThomasA\obj\Debug\Simplified21ThomasA.csproj.CoreCompileInputs.cache
+C:\Users\Thomas\Desktop\Programming\Assignments\Simplified21ThomasA\Simplified21ThomasA\obj\Debug\Simplified21ThomasA.exe
+C:\Users\Thomas\Desktop\Programming\Assignments\Simplified21ThomasA\Simplified21ThomasA\obj\Debug\Simplified21ThomasA.pdb
+C:\Users\Thomas\Desktop\Programming\Assignments\Simplified21ThomasA\Simplified21ThomasA\obj\Debug\Simplified21ThomasA.csprojResolveAssemblyReference.cache
